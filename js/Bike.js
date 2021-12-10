@@ -7,15 +7,18 @@
  * @param typePeinture
  */
 
-const velo = function (color, wheels, mark, rayonRoues, typePeinture) {
-    vehicle.call(this, color, wheels,mark);
+const Bike = function (color, wheels, mark, rayonRoues, typePeinture) {
+    Vehicle.call(this, color, wheels,mark);
     this.rayonRoues = rayonRoues;
     this.typePeinture = typePeinture;
 
+    /**
+     * Monter sur le vélo
+      */
     this.monter = function () {
         console.log("Je monte sur mon vélo");
     }
 
 }
-velo.prototype = Object.create(vehicle.prototype);
-velo.constructor = Velo;
+Bike.prototype = Object.create(Vehicle.prototype);
+Bike.constructor = Bike;
